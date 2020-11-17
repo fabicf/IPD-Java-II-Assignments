@@ -65,6 +65,52 @@ class Cat extends Animals{
 	
 }
 
+//Exercise 3
+
+class A extends Marks{
+	double s1;
+	double s2;
+	double s3;
+	
+	//constructor
+	public A (double subject1, double subject2, double subject3) {
+		s1 = subject1;
+		s2 = subject2;
+		s3 = subject3;
+	}
+
+	@Override
+	double getPercentage() {
+		
+		return (s1 + s2 + s3) /3;
+	}
+	
+}
+
+class B extends Marks{
+	double s1;
+	double s2;
+	double s3;
+	double s4;
+	
+	//constructor
+	public B (double subject1, double subject2, double subject3, double subject4) {
+		s1 = subject1;
+		s2 = subject2;
+		s3 = subject3;
+		s4 = subject4;
+	}
+
+	@Override
+	double getPercentage() {
+		
+		return (s1 + s2 + s3 + s4) /4;
+	}
+	
+}
+
+
+
 public class Assign2 {
 
 	public static void main(String[] args) {
@@ -82,6 +128,14 @@ public class Assign2 {
 		
 		Cat myCat = new Cat();
 		System.out.println(myCat.sound());
+		
+		//Exercise 3
+		A myA = new A (8.0, 5.5, 7.2);
+		System.out.println(myA.getPercentage());
+		
+		B myB = new B(5.0, 6.0, 7.5, 4.9);
+		System.out.println(myB.getPercentage());
+		
 
 	}
 
