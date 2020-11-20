@@ -1,11 +1,16 @@
 
 public class Brakdancer extends Dancer {
 
-	@Override
-	public void dance() {
-		// TODO Auto-generated method stub
-		super.dance();
+	public Brakdancer(int age, String name) {
+		super(age, name);
+		// TODO Auto-generated constructor stub
 	}
 
-	
+	@Override
+	public void dance() {
+
+		super.dance();
+		// System.out.println("Break dance");
+	}
+
 }

@@ -3,15 +3,14 @@ public class Dancer {
 	int age;
 	String name;
 
-	public void dance() {
-		
-		Dancer[] dancerArray = new Dancer[]
-				{new danX(), new danY(), new danZ()};
-		
-		for (int i = 0; i < dancerArray.length; i++ ) {
-			
-		}
+	public Dancer(int age, String name) {
+		super();
+		this.age = age;
+		this.name = name;
+	}
 
+	public void dance() {
+		System.out.println("Dancer: " + name);
 	}
 
 }

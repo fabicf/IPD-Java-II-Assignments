@@ -1,10 +1,15 @@
 
 public class EletricBoogieDancer extends Dancer {
 
+	public EletricBoogieDancer(int age, String name) {
+		super(age, name);
+	}
+
 	@Override
 	public void dance() {
-		// TODO Auto-generated method stub
+
 		super.dance();
+
 	}
 
 }
