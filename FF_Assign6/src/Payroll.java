@@ -1,12 +1,17 @@
-import java.util.ArrayList;
 
-public abstract class Payroll {
-	
-	protected ArrayList[] employee = new ArrayList[2];
+public class Payroll {
 
-	public void paySalary() {
-		
+	protected Employee[] employee;
+
+	// constructor
+	public Payroll(Employee[] employee) {
+		this.employee = employee;
 	}
-	
-	
+	// method paySalary
+	public void paySalary() {
+		for (int i = 0; i < employee.length; i++) {
+			System.out.println(employee[i]);
+		}
+	}
+
 }
