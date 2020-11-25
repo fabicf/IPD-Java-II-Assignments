@@ -20,6 +20,10 @@ public class SalariedEmployee extends Employee {
 	public String toString() {
 		return "SalariedEmployee [basicSalary=" + basicSalary + ", name=" + name + ", ssn=" + ssn + ", salary()="
 				+ salary() + "]";
+		
+
 	}
+
+	
 
 }

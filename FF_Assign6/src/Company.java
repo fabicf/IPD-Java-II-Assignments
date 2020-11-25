@@ -1,14 +1,19 @@
 
+
+
+
+
 public class Company {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		ComissionEmployee myEmployee1 = new ComissionEmployee("John", "Deer", 2000, 0.15);
+		ComissionEmployee myEmployee1a = new ComissionEmployee("Leo", "Deer", 2000, 0.15);
 		HourlyEmployee myEmployee2 = new HourlyEmployee("Jason", "Lee", 20, 15);
 		SalariedEmployee myEmployee3 = new SalariedEmployee("Arnold", "Schwaz", 300);
 
-		Employee[] employee = new Employee[] { myEmployee1, myEmployee2, myEmployee3 };
+		Employee[] employee = new Employee[] { myEmployee1, myEmployee1a, myEmployee2, myEmployee3 };
 
 		Payroll p1 = new Payroll(employee);
 		p1.paySalary();
