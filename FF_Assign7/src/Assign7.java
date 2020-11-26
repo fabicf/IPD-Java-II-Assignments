@@ -3,6 +3,7 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Assign7 {
 
@@ -29,7 +30,29 @@ public class Assign7 {
 
 		for (User myUser : userList) {
 			System.out.println(myUser);
+
 		}
+		
+		System.out.println("sort by name using comparable");
+		
+		Collections.sort(userList);
+		
+		for (User myUser : userList) {
+			System.out.println(myUser);
+
+		}
+		
+		Collections.sort(userList);
+		
+		
+		System.out.println("==============");
+		
+		//sort by id
+		userList.forEach(u -> System.out.println(u));
+		Collections.sort(userList, new IdComparator());
+		System.out.println("sort by Id using comparator");
+		userList.forEach(u -> System.out.println(u));
+
 	}
 
 }
