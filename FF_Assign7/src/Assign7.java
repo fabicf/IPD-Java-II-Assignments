@@ -32,22 +32,21 @@ public class Assign7 {
 			System.out.println(myUser);
 
 		}
-		
+
 		System.out.println("sort by name using comparable");
-		
+
 		Collections.sort(userList);
-		
+
 		for (User myUser : userList) {
 			System.out.println(myUser);
 
 		}
-		
+
 		Collections.sort(userList);
-		
-		
+
 		System.out.println("==============");
-		
-		//sort by id
+		// ======================================================================
+		// sort by id
 		userList.forEach(u -> System.out.println(u));
 		Collections.sort(userList, new IdComparator());
 		System.out.println("sort by Id using comparator");
