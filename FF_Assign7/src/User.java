@@ -45,21 +45,9 @@ public class User implements Comparable<User> {
 		return "User [id=" + id + ", name=" + name + ", birthDate=" + birthDate + "]";
 	}
 
-	// sort by name
-
+	// Sort by name using compareTo - comparable
 	public int compareTo(User o) {
 		return this.name.compareTo(o.name);
 	}
-
-//	// sort by id
-//	public int compareTo1(User o) {
-//		if (this.id == o.id) {
-//			return 0;
-//		} else if (id < o.id) {
-//			return 1;
-//		} else {
-//			return -1;
-//		}
-//	}
 
 }
