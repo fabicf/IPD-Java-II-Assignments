@@ -8,7 +8,7 @@ public class BirthDateComparator implements Comparator<User> {
 		if (o1.getBirthDate().isEqual(o2.getBirthDate())){
 			return 0;
 		}
-		else if (o1.getBirthDate().isAfter(o2.getBirthDate())) { //If you wish sort in a decreasing way, use .isBefore()
+		else if (o1.getBirthDate().isAfter(o2.getBirthDate())) { //To sort in a decreasing way, use .isBefore()
 			return 1;
 		}
 		else {
