@@ -3,7 +3,7 @@ public class Message {
 	private User receiver;
 	private User sender;
 	private String body;
-	
+
 	public Message(User receiver, User sender, String body) {
 		super();
 		this.receiver = receiver;
@@ -34,7 +34,10 @@ public class Message {
 	public void setBody(String body) {
 		this.body = body;
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Message [receiver=" + receiver + ", sender=" + sender + ", body=" + body + "]";
+	}
+
 }

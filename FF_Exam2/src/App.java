@@ -41,17 +41,36 @@ public class App {
 		// EmailMessage instance
 		EmailMessage email1 = new EmailMessage(
 				new EmailUser("Judy", "Foster", new Address("Main Street", 1), "a.b@g.com"),
-				new EmailUser("Betty", "Beans", new Address("Second Street", 2), "v.r@g.com"), 
-				"This is one email");
-		
-		//smsMessageInstance
-		SmsMessage smsMessage = new SmsMessage(
-				new SmsUser("Judy", "Foster", new Address("Main Street", 1), "122123"), 
-				new SmsUser("Bety", "Beans", new Address("Second Street", 2), "1232313"), 
-				"This is one sms");
-		
+				new EmailUser("Betty", "Beans", new Address("Second Street", 2), "v.r@g.com"), "This is one email");
+
+		// smsMessageInstance
+		SmsMessage smsMessage = new SmsMessage(new SmsUser("Judy", "Foster", new Address("Main Street", 1), "122123"),
+				new SmsUser("Bety", "Beans", new Address("Second Street", 2), "1232313"), "This is one sms");
+
+		SendEmail se1 = new SendEmail();
+		SendSms ss1 = new SendSms();
+
 		listOfMessages.add(email1);
 		listOfMessages.add(smsMessage);
+
+		for (int i = 0; i < listOfMessages.size(); i++) {
+
+			if (listOfMessages.get(i) instanceof EmailMessage) {
+				EmailMessage m1 = (EmailMessage) listOfMessages.get(i);
+				if (se1.validateMessage(m1.getSender(), m1.getReceiver(), m1.getBody())) {
+					se1.sendMesssage(m1);
+
+				}
+			}
+			if (listOfMessages.get(i) instanceof SmsMessage) {
+				SmsMessage m1 = (SmsMessage) listOfMessages.get(i);
+				if (ss1.validateMessage(m1.getSender(), m1.getReceiver(), m1.getBody())) {
+					ss1.sendMesssage(m1);
+
+				}
+			}
+
+		}
 
 	}
 
